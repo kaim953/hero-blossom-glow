@@ -1,0 +1,490 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    /* Theme Color - Main */
+    --theme-main: 53 97% 84%;
+
+    /* Background Colors */
+    --bg-01: 40 18% 95%;
+    --bg-02: 36 21% 92%;
+    --bg-03: 26 16% 91%;
+
+    /* Overlay Colors */
+    --overlay-00: 0 0% 0% / 0.20;
+    --overlay-01: 0 0% 0% / 0.30;
+    --overlay-02: 0 0% 0% / 0.70;
+
+    /* Neutral Colors */
+    --neutral-00: 0 0% 100%;
+    --neutral-01: 0 0% 98%;
+    --neutral-02: 0 0% 96%;
+    --neutral-03: 0 0% 93%;
+    --neutral-04: 0 0% 90%;
+    --neutral-05: 0 0% 85%;
+    --neutral-06: 0 0% 80%;
+    --neutral-07: 0 0% 74%;
+    --neutral-08: 0 0% 68%;
+    --neutral-09: 0 0% 60%;
+    --neutral-10: 0 0% 37%;
+    --neutral-11: 0 0% 10%;
+    --neutral-12: 0 0% 0%;
+
+    /* Success Color */
+    --success: 142 76% 36%;
+
+    /* Star/Rating Color */
+    --star: 45 93% 47%;
+
+    /* Semantic mappings */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 53 97% 84%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 40 18% 95%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 36 21% 92%;
+    --muted-foreground: 0 0% 37%;
+
+    --accent: 26 16% 91%;
+    --accent-foreground: 0 0% 10%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 218 100% 63%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  /* Heading Typography System */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2 {
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+  }
+
+  h3, h4, h5, h6 {
+    line-height: 1.3em;
+  }
+
+  h3 {
+    letter-spacing: -0.05em;
+  }
+
+  h4, h5, h6 {
+    letter-spacing: -0.04em;
+  }
+
+  /* Mobile (default - 809px and below) */
+  h1 { font-size: 36px; }
+  h2 { font-size: 30px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 22px; }
+  h5 { font-size: 20px; }
+  h6 { font-size: 18px; }
+
+  /* Tablet (810px - 1199px) */
+  @media (min-width: 810px) {
+    h1 { font-size: 50px; }
+    h2 { font-size: 36px; }
+    h3 { font-size: 28px; }
+    h4 { font-size: 26px; }
+    h5 { font-size: 24px; }
+    h6 { font-size: 20px; }
+  }
+
+  /* Desktop (1200px and above) */
+  @media (min-width: 1200px) {
+    h1 { font-size: 56px; }
+    h2 { font-size: 40px; }
+    h3 { font-size: 36px; }
+    h4 { font-size: 30px; }
+    h5 { font-size: 26px; }
+    h6 { font-size: 20px; }
+  }
+}
+
+/* Heading Typography Utility Classes */
+@layer components {
+  .text-h4,
+  h1.text-h4, h2.text-h4, h3.text-h4, h4.text-h4, h5.text-h4, h6.text-h4 {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 22px !important;
+    letter-spacing: -0.04em;
+    line-height: 1.3em;
+    font-weight: 400;
+  }
+
+  @media (min-width: 810px) {
+    .text-h4,
+    h1.text-h4, h2.text-h4, h3.text-h4, h4.text-h4, h5.text-h4, h6.text-h4 {
+      font-size: 26px !important;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .text-h4,
+    h1.text-h4, h2.text-h4, h3.text-h4, h4.text-h4, h5.text-h4, h6.text-h4 {
+      font-size: 30px !important;
+    }
+  }
+
+  /* Body Text Typography Utility Classes */
+  .text-body {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    font-weight: 400;
+  }
+
+  .text-body-small {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.04em;
+    line-height: 1.3em;
+    font-weight: 400;
+  }
+
+  .text-body-large {
+    font-family: 'Geist', sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.04em;
+    line-height: 1.3em;
+    font-weight: 400;
+  }
+
+  .text-button {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+
+  .text-tag {
+    font-family: 'Geist', sans-serif;
+    font-size: 12px;
+    letter-spacing: -0.03em;
+    line-height: 1.2em;
+    font-weight: 500;
+  }
+
+  .text-label {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+
+  .text-nav {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+
+  .text-nav-footer {
+    font-family: 'Geist', sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+
+  /* Blog Post Content Typography - Scoped to CMS content only */
+  .blog-prose h1,
+  .blog-prose h2,
+  .blog-prose h3,
+  .blog-prose h4,
+  .blog-prose h5,
+  .blog-prose h6 {
+    margin-bottom: 8px;
+    line-height: 140%;
+  }
+
+  .blog-prose p {
+    margin-bottom: 16px;
+    line-height: 140%;
+  }
+
+  /* List Styles */
+  .blog-prose ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .blog-prose ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .blog-prose li {
+    margin-bottom: 4px;
+    line-height: 140%;
+  }
+
+  /* Nested lists */
+  .blog-prose ul ul,
+  .blog-prose ol ol,
+  .blog-prose ul ol,
+  .blog-prose ol ul {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  /* Link Styles */
+  .blog-prose a {
+    color: hsl(218 100% 50%);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .blog-prose a:hover {
+    color: hsl(218 100% 40%);
+  }
+
+  /* Text Formatting */
+  .blog-prose strong {
+    font-weight: 600;
+  }
+
+  .blog-prose em {
+    font-style: italic;
+  }
+
+  /* Blockquote Styles */
+  .blog-prose blockquote {
+    border-left: 3px solid hsl(var(--neutral-05));
+    padding-left: 1rem;
+    margin-left: 0;
+    margin-bottom: 16px;
+    color: hsl(var(--neutral-10));
+    font-style: italic;
+  }
+
+  /* Inline Code Styles */
+  .blog-prose code {
+    background-color: hsl(var(--neutral-03));
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: monospace;
+  }
+
+  /* Horizontal Rule */
+  .blog-prose hr {
+    border: none;
+    border-top: 1px solid hsl(var(--neutral-05));
+    margin: 24px 0;
+  }
+
+  /* Image Styles */
+  .blog-prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  .btn-filled {
+    background: linear-gradient(to bottom right, hsl(var(--neutral-10)), hsl(var(--neutral-12)));
+    box-shadow: 0 2px 8px hsl(var(--neutral-12) / 0.25);
+  }
+
+  .btn-filled-main {
+    background: hsl(var(--theme-main));
+    box-shadow: 0 2px 8px hsl(var(--neutral-12) / 0.15);
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Tablet (810px - 1199px) */
+  @media (min-width: 810px) {
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  /* Desktop (1200px and above) */
+  @media (min-width: 1200px) {
+    .container {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
+  /* Section padding - default for all sections */
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  /* Desktop (1200px and above) */
+  @media (min-width: 1200px) {
+    .section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  /* Hero section - no bottom padding */
+  .section-hero {
+    padding-top: 64px;
+    padding-bottom: 0;
+  }
+
+  /* Desktop (1200px and above) */
+  @media (min-width: 1200px) {
+    .section-hero {
+      padding-top: 80px;
+      padding-bottom: 0;
+    }
+  }
+
+  /* Page header top padding - for hero and landing page headers */
+  .page-header {
+    padding-top: 80px;
+  }
+
+
+  /* Admin page header padding - smaller than landing page */
+  .admin-page-header {
+    padding-top: 40px;
+  }
+
+  /* Tablet (810px and above) */
+  @media (min-width: 810px) {
+    .admin-page-header {
+      padding-top: 48px;
+    }
+  }
+
+  /* Desktop (1200px and above) */
+  @media (min-width: 1200px) {
+    .admin-page-header {
+      padding-top: 56px;
+    }
+  }
+
+  /* Blog page header padding */
+  .blog-page-header {
+    padding-top: 40px;
+  }
+}
+
+/* Container wrap - reusable rounded container with configurable background */
+.container-wrap {
+  border-radius: 28px 28px 0 0; /* Mobile: top corners only */
+}
+
+/* Tablet (810px - 1199px) */
+@media (min-width: 810px) {
+  .container-wrap {
+    border-radius: 28px; /* All corners 28px */
+  }
+}
+
+/* Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .container-wrap {
+    border-radius: 32px; /* All corners 32px */
+  }
+}
+
+/* Small container - narrower content wrapper with reduced horizontal padding */
+.small-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Tablet (810px - 1199px) */
+@media (min-width: 810px) {
+  .small-container {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+
+/* Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .small-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+/* Popup (Dialog/AlertDialog) animations: pure opacity, no translate */
+@keyframes popup-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popup-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* GPU acceleration for ticker animations */
+.animate-ticker,
+.animate-ticker-reverse,
+.animate-ticker-up,
+.animate-ticker-down {
+  will-change: transform;
+}
+
