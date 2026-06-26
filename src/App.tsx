@@ -43,7 +43,8 @@ const queryClient = new QueryClient({
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <IconContext.Provider value={{ weight: "bold" }}>
+    <ThemeProvider>
+      <IconContext.Provider value={{ weight: "bold" }}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -122,6 +123,7 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
     </IconContext.Provider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 

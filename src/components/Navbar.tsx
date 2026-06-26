@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { List, X } from "@phosphor-icons/react";
 import FilledButton from "./FilledButton";
 import HashLink from "./HashLink";
+import ThemeControls from "./ThemeControls";
 import Logo from "@/assets/Logo.png";
 
 interface NavItem {
@@ -55,8 +56,9 @@ const Navbar = ({
           ))}
         </div>
 
-        {/* CTA Button - hidden on mobile */}
-        <div className="hidden tablet:block">
+        {/* CTA Button + Theme controls - hidden on mobile */}
+        <div className="hidden tablet:flex items-center gap-3">
+          <ThemeControls />
           <FilledButton href={ctaHref}>{ctaText}</FilledButton>
         </div>
 
