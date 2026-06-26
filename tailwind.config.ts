@@ -18,12 +18,12 @@ export default {
     },
     colors: {
       /* Theme Color - Main */
-      main: "#FEF7AF",
+      main: "hsl(var(--theme-main))",
       /* Background Colors */
       bg: {
-        '01': "#F4F2EE",
-        '02': "#F0ECE6",
-        '03': "#EDE9E6",
+        '01': "hsl(var(--bg-01))",
+        '02': "hsl(var(--bg-02))",
+        '03': "hsl(var(--bg-03))",
       },
       /* Overlay Colors */
       overlay: {
@@ -31,25 +31,25 @@ export default {
         '01': "rgba(0, 0, 0, 0.30)",
         '02': "rgba(0, 0, 0, 0.68)",
       },
-      /* Neutral Colors - Edit these hex values to customize */
+      /* Neutral Colors - driven by CSS variables for dark mode support */
       neutral: {
-        '00': "#FFFFFF",  // White
-        '01': "#FAFAFA",
-        '02': "#F4F4F4",
-        '03': "#EEEEEE",
-        '04': "#E6E6E6",
-        '05': "#DADADA",
-        '06': "#CCCCCC",
-        '07': "#BDBDBD",
-        '08': "#AEAEAE",
-        '09': "#999999",
-        '10': "#605F5F",
-        '11': "#1A1A1A",
-        '12': "#000000",  // Black
+        '00': "hsl(var(--neutral-00))",
+        '01': "hsl(var(--neutral-01))",
+        '02': "hsl(var(--neutral-02))",
+        '03': "hsl(var(--neutral-03))",
+        '04': "hsl(var(--neutral-04))",
+        '05': "hsl(var(--neutral-05))",
+        '06': "hsl(var(--neutral-06))",
+        '07': "hsl(var(--neutral-07))",
+        '08': "hsl(var(--neutral-08))",
+        '09': "hsl(var(--neutral-09))",
+        '10': "hsl(var(--neutral-10))",
+        '11': "hsl(var(--neutral-11))",
+        '12': "hsl(var(--neutral-12))",
       },
       /* Success & Rating Colors */
-      success: "#22C55E",
-      star: "#FBBF24",
+      success: "hsl(var(--success))",
+      star: "hsl(var(--star))",
       /* Semantic Colors */
       transparent: 'transparent',
       current: 'currentColor',

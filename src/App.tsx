@@ -9,6 +9,7 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 import ScrollToTop from "@/components/ScrollToTop";
 import { CircleNotch, IconContext } from "@phosphor-icons/react";
 import FloatingInstructionsButton from "@/components/FloatingInstructionsButton";
+import { ThemeProvider } from "@/hooks/useTheme";
 
 // Lazy load pages for code splitting
 const Index = lazy(() => import("./pages/Index"));
@@ -42,7 +43,8 @@ const queryClient = new QueryClient({
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <IconContext.Provider value={{ weight: "bold" }}>
+    <ThemeProvider>
+      <IconContext.Provider value={{ weight: "bold" }}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -121,6 +123,7 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
     </IconContext.Provider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 

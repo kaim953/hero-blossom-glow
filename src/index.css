@@ -74,6 +74,62 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
   }
+
+  .dark {
+    /* Theme accent stays warm but slightly muted in dark */
+    --theme-main: 53 70% 60%;
+
+    /* Dark backgrounds */
+    --bg-01: 0 0% 8%;
+    --bg-02: 0 0% 11%;
+    --bg-03: 0 0% 14%;
+
+    /* Inverted neutral scale: 00 becomes near-black, 12 becomes white */
+    --neutral-00: 0 0% 7%;
+    --neutral-01: 0 0% 9%;
+    --neutral-02: 0 0% 12%;
+    --neutral-03: 0 0% 16%;
+    --neutral-04: 0 0% 20%;
+    --neutral-05: 0 0% 26%;
+    --neutral-06: 0 0% 34%;
+    --neutral-07: 0 0% 44%;
+    --neutral-08: 0 0% 55%;
+    --neutral-09: 0 0% 65%;
+    --neutral-10: 0 0% 78%;
+    --neutral-11: 0 0% 95%;
+    --neutral-12: 0 0% 100%;
+
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 53 70% 60%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 16%;
+    --accent-foreground: 0 0% 95%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+  }
+
+  html, body {
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+  }
+
+  /* Eye Protection: warm amber tint over the whole viewport */
+  .eye-protection-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background-color: rgba(255, 170, 60, 0.18);
+    mix-blend-mode: multiply;
+  }
 }
 
 @layer base {
