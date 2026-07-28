@@ -191,7 +191,7 @@ export const useUpdateBlogPost = () => {
 
       const { data, error } = await supabase
         .from("blog_posts")
-        .update(normalizedPost)
+        .update(normalizedPost as never)
         .eq("id", id)
         .select()
         .single();
@@ -228,7 +228,7 @@ export const useUpdateBlogPostSilent = () => {
 
       const { data, error } = await supabase
         .from("blog_posts")
-        .update(normalizedPost)
+        .update(normalizedPost as never)
         .eq("id", id)
         .select()
         .single();
