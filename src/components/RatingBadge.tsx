@@ -14,9 +14,9 @@ const RatingBadge = ({
   variant = "light", 
   className = "" 
 }: RatingBadgeProps) => {
-  const textPrimaryClass = variant === "dark" ? "text-neutral-00" : "text-neutral-12";
-  const textSecondaryClass = variant === "dark" ? "text-neutral-04" : "text-neutral-10";
-  const borderClass = variant === "dark" ? "border-neutral-04" : "border-neutral-04";
+  const textPrimaryClass = variant === "dark" ? "text-neutral-00 dark:text-neutral-12" : "text-neutral-12";
+  const textSecondaryClass = variant === "dark" ? "text-neutral-04 dark:text-neutral-09" : "text-neutral-10";
+  const borderClass = variant === "dark" ? "border-neutral-04 dark:border-neutral-06" : "border-neutral-04";
 
   return (
     <div className={`flex items-center ${className}`}>
