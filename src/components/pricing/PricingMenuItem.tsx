@@ -26,8 +26,8 @@ const PricingMenuItem = ({
       `}
     >
       <div className="flex flex-col items-start gap-0.5">
-        <h6 className="text-neutral-00">{title}</h6>
-        <span className="text-body-small text-neutral-04">{subtitle}</span>
+        <h6 className="text-neutral-00 dark:text-neutral-12">{title}</h6>
+        <span className="text-body-small text-neutral-04 dark:text-neutral-09">{subtitle}</span>
       </div>
       
       {/* Circular arrow - only visible on active */}
@@ -36,7 +36,7 @@ const PricingMenuItem = ({
           className="rounded-full p-0.5 flex items-center justify-center"
           style={{ border: "2px solid hsl(var(--neutral-04))" }}
         >
-          <ArrowRight size={16} className="text-neutral-00 rotate-90 desktop:rotate-0" />
+          <ArrowRight size={16} className="text-neutral-00 dark:text-neutral-12 rotate-90 desktop:rotate-0" />
         </div>
       )}
     </button>

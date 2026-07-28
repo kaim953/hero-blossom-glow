@@ -37,7 +37,7 @@ const Navbar = ({
 
   return (
     <>
-      <nav className="fixed top-[20px] left-1/2 -translate-x-1/2 z-20 w-[calc(100%-48px)] tablet:w-fit tablet:min-w-[616px] bg-neutral-00 rounded-[60px] py-[10px] px-[12px] items-center justify-between gap-8 border shadow-[0_1px_20px_rgba(224,215,198,0.5)] border-neutral-03 flex flex-row">
+      <nav className="fixed top-[20px] left-1/2 -translate-x-1/2 z-20 w-[calc(100%-48px)] tablet:w-max tablet:min-w-[616px] tablet:max-w-[calc(100%-48px)] bg-neutral-00 rounded-[60px] py-[10px] px-[12px] items-center justify-between gap-8 border shadow-[0_1px_20px_rgba(224,215,198,0.5)] border-neutral-03 flex flex-row">
         {/* Logo */}
         <Link to={logoHref} className="flex-shrink-0">
           <img src={Logo} alt="Logo" className="h-[35px] w-auto" fetchPriority="high" decoding="async" />
