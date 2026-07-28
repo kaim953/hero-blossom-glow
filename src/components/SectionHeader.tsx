@@ -17,8 +17,8 @@ const SectionHeader = ({
   maxWidth = "600px",
   hideSubtitleOnDesktop = false
 }: SectionHeaderProps) => {
-  const titleClass = variant === "dark" ? "text-neutral-00" : "text-neutral-12";
-  const subtitleClass = variant === "dark" ? "text-neutral-00/80" : "text-neutral-10";
+  const titleClass = variant === "dark" ? "text-neutral-00 dark:text-neutral-12" : "text-neutral-12";
+  const subtitleClass = variant === "dark" ? "text-neutral-00/80 dark:text-neutral-12/80" : "text-neutral-10";
 
   return (
     <div 
