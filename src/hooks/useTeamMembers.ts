@@ -107,7 +107,7 @@ export const useUpdateTeamMember = () => {
 
       const { data, error } = await supabase
         .from("team_members")
-        .update(normalizedMember)
+        .update(normalizedMember as never)
         .eq("id", id)
         .select()
         .single();
@@ -143,7 +143,7 @@ export const useUpdateTeamMemberSilent = () => {
 
       const { data, error } = await supabase
         .from("team_members")
-        .update(normalizedMember)
+        .update(normalizedMember as never)
         .eq("id", id)
         .select()
         .single();
