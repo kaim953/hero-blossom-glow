@@ -4,7 +4,7 @@ import { List, X } from "@phosphor-icons/react";
 import FilledButton from "./FilledButton";
 import HashLink from "./HashLink";
 import ThemeControls from "./ThemeControls";
-import Logo from "@/assets/Logo.png";
+import BrandLogo from "./BrandLogo";
 
 interface NavItem {
   label: string;
@@ -39,9 +39,10 @@ const Navbar = ({
     <>
       <nav className="fixed top-[20px] left-1/2 -translate-x-1/2 z-20 w-[calc(100%-48px)] tablet:w-max tablet:min-w-[616px] tablet:max-w-[calc(100%-48px)] bg-neutral-00 rounded-[60px] py-[10px] px-[12px] items-center justify-between gap-8 border shadow-[0_1px_20px_rgba(224,215,198,0.5)] border-neutral-03 flex flex-row">
         {/* Logo */}
-        <Link to={logoHref} className="flex-shrink-0">
-          <img src={Logo} alt="Logo" className="h-[35px] w-auto" fetchPriority="high" decoding="async" />
+        <Link to={logoHref} className="flex-shrink-0 pl-1" aria-label="Grovia home">
+          <BrandLogo />
         </Link>
+
 
         {/* Navigation Links - hidden on mobile */}
         <div className="hidden tablet:flex items-center gap-[16px]">
