@@ -4,7 +4,7 @@ import { List, X } from "@phosphor-icons/react";
 import FilledButton from "./FilledButton";
 import HashLink from "./HashLink";
 import ThemeControls from "./ThemeControls";
-import Logo from "@/assets/Logo.png";
+import BrandLogo from "./BrandLogo";
 
 interface NavItem {
   label: string;
