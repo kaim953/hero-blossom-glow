@@ -544,3 +544,23 @@ All colors MUST be HSL.
   will-change: transform;
 }
 
+/* Background stripes horizontal scroll animation */
+@keyframes bg-stripes-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes bg-stripes-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-bg-stripes-left {
+  animation: bg-stripes-left 20s linear infinite;
+}
+
+.animate-bg-stripes-right {
+  animation: bg-stripes-right 20s linear infinite;
+}
+
+
